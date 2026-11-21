@@ -68,5 +68,6 @@ button:hover,.read-more:hover,.more-btn:hover,.btn-enroll:hover,.btn-preview:hov
 .hero p{animation:bpFadeUp .8s .22s both}
 .logo .sitename{position:relative}
 .logo .sitename:after{content:"";display:inline-block;width:8px;height:8px;margin-left:7px;border-radius:50%;background:var(--bp-orange);vertical-align:middle}
+.footer .footer-about .logo .college-name{font-size:clamp(14px,1.4vw,18px);font-weight:800;letter-spacing:0;line-height:1.15;max-width:230px;color:var(--bp-ink)!important}
 @media(max-width:768px){.hero{min-height:560px!important}.section{padding:60px 0!important}.hero h2{font-size:2.7rem!important}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
