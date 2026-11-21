@@ -29,12 +29,15 @@ a{transition:color .25s ease,background .25s ease,transform .25s ease}
 .hero .container{position:relative;z-index:3}
 .hero h2{font-size:clamp(2.7rem,6vw,5rem)!important;line-height:1.06!important;font-weight:800!important;max-width:850px;color:#fff!important;text-shadow:0 3px 24px rgba(0,0,0,.8)}
 .hero p{font-size:clamp(1rem,2vw,1.25rem)!important;max-width:650px;color:#fff!important;line-height:1.8;text-shadow:0 2px 12px rgba(0,0,0,.8)}
-.hero .hero-establishment{font-size:clamp(.85rem,1.3vw,1.05rem)!important;max-width:900px!important;margin:0 0 1.25rem!important;color:#ffe08a!important;font-weight:700;letter-spacing:.04em}
+.hero .hero-establishment{display:inline-block;font-size:clamp(.85rem,1.3vw,1.05rem)!important;max-width:100%!important;margin:0 0 1.25rem!important;padding:8px 14px!important;border:1px solid #ffe08a;border-radius:999px;background:#ffcf4a;color:#111827!important;font-weight:800;letter-spacing:.04em;text-shadow:none!important;box-shadow:0 6px 18px rgba(0,0,0,.35)}
 .hero .btn-get-started,.hero .btn-get-started:focus{color:#111827!important;background:#ffcf4a!important;border:2px solid #ffcf4a!important;box-shadow:0 6px 24px rgba(0,0,0,.45)}
 .hero .btn-get-started:hover,.hero .btn-get-started:focus:hover{color:#111827!important;background:#ffe08a!important;border-color:#ffe08a!important}
 .section{padding:80px 0!important}
 .section-title h2{color:var(--bp-purple)!important;font-weight:800!important;letter-spacing:.12em!important}
 .section-title p{color:var(--bp-ink)!important;font-family:'Manrope',sans-serif!important;font-weight:800!important}
+.counts .stats-item{background:linear-gradient(135deg,rgba(139,92,246,.24),rgba(36,26,53,.96));border:1px solid rgba(196,181,253,.48);border-radius:18px;box-shadow:0 12px 30px rgba(0,0,0,.24)}
+.counts .stats-item span{color:#ddd6fe!important}
+.counts .stats-item p{color:#fff!important}
 .why-us .icon-box{background-color:var(--accent-color);color:var(--contrast-color)}
 .why-us .icon-box i{color:var(--contrast-color);background:color-mix(in srgb,var(--contrast-color),transparent 85%)}
 .about .content h3{font-size:2rem;font-weight:800}
@@ -45,6 +48,14 @@ a{transition:color .25s ease,background .25s ease,transform .25s ease}
 .courses .course-content h3 a,.course-item h3 a{color:var(--bp-ink);font-weight:800}
 .courses .course-content h3 a:hover,.course-item h3 a:hover{color:var(--bp-purple)}
 .courses .course-content .category{background:var(--bp-lilac);color:var(--bp-purple);border-radius:30px;padding:7px 13px;font-weight:800}
+.courses .course-image-wrap{position:relative;overflow:hidden}
+.courses .course-image-wrap>img{display:block;width:100%;transition:transform .35s ease}
+.courses .course-facebook-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(8,7,11,.62);color:#fff;font-size:2rem;opacity:0;pointer-events:none;text-decoration:none;transition:opacity .25s ease,color .25s ease}
+.courses .course-image-wrap:hover .course-facebook-overlay,.courses .course-image-wrap:focus-within .course-facebook-overlay{opacity:1;pointer-events:auto}
+.courses .course-image-wrap:hover>img{transform:scale(1.04)}
+.courses .course-facebook-overlay:hover{color:#ffe08a}
+.pricing .pricing-item .course-image{display:block;width:calc(100% + 40px);max-width:none;height:160px;object-fit:cover;margin:-20px -20px 20px}
+.pricing .pricing-item .course-image+h3{margin-top:0}
 .trainers .member .member-content{padding:24px}
 .trainers .member .member-content h4{font-weight:800}
 .events .event-item{background:var(--surface-color)}
