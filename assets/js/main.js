@@ -69,9 +69,15 @@
    */
   const preloader = document.querySelector('#preloader');
   if (preloader) {
-    window.addEventListener('load', () => {
+    const removePreloader = () => {
       preloader.remove();
-    });
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', removePreloader, { once: true });
+    } else {
+      removePreloader();
+    }
   }
 
   /**
