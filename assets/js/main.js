@@ -23,34 +23,17 @@
   window.addEventListener('load', toggleScrolled);
 
   /**
-   * Mobile nav toggle
+   * Open the mobile navigation page
    */
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-
-  function mobileNavToogle() {
-    const isOpen = document.querySelector('body').classList.toggle('mobile-nav-active');
-    if (mobileNavToggleBtn) {
-      mobileNavToggleBtn.classList.toggle('bi-list', !isOpen);
-      mobileNavToggleBtn.classList.toggle('bi-x', isOpen);
-      mobileNavToggleBtn.setAttribute('aria-expanded', String(isOpen));
-      mobileNavToggleBtn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
-    }
-  }
   if (mobileNavToggleBtn) {
-    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
-  }
-
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
-      }
+    mobileNavToggleBtn.addEventListener('click', () => {
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      const menuUrl = new URL('mobile-menu.html', window.location.href);
+      menuUrl.searchParams.set('from', currentPage);
+      window.location.assign(menuUrl.href);
     });
-
-  });
+  }
 
   /**
    * Toggle mobile nav dropdowns
